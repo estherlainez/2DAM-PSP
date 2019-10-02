@@ -11,32 +11,38 @@ public class Ejercicio3 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner teclado=new Scanner(System.in);
+		boolean esAsterisco=false;
 
-		String cadena ;
+		String cadena="";
 		String cadena2="";
-		char c = ' ';
+		String aux="";
+		String asterisco="*";
 
+		
 		do {
-			System.out.println("Introduce una cadena:");
-			cadena=teclado.nextLine();
-
-			int i=0;
-			char a=' ';
-
-			while((i<cadena.length())&&(esAsterisco(c)==false)) {
-				c=cadena.charAt(i);
-				if(esAsterisco(c)==false) {
-					cadena2=cadena+a;
-				}
-				i++;
+			System.out.println("Introduce cadena ");
+			cadena= teclado.nextLine();
+			//System.out.println("Introduce cadena ");
+			//cadena2= teclado.nextLine();
+			//aux=cadena+cadena2;
+			
+			if(cadena.equals(asterisco)) {
+				esAsterisco=true;
 			}
+			
 			System.out.println("Cadena: ");
-			System.out.println(cadena2.toUpperCase());
-
-		}while(esAsterisco(c)==false);
+		
+			System.out.println(cadena);
+			System.out.println(cadena.toUpperCase());
+			
+			
+		}while (esAsterisco==false);
+		
+		
+		
 
 	}
-
+/*
 	public static boolean esAsterisco(char c) {
 		String asterisco="*";
 		if (asterisco.indexOf(c)== -1) {
@@ -44,5 +50,5 @@ public class Ejercicio3 {
 		}
 		return true;
 	}
-
+*/
 }

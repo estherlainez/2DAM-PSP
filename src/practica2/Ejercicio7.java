@@ -17,9 +17,9 @@ public class Ejercicio7 {
 		Scanner teclado=new Scanner(System.in);
 		
 		//Ficheros de entrada y de salida del error
-		File entrada=new File("src/ficheroEntrada.dat");
-		File salida=new File("src/ficheroSalida.txt");
-		File ficheroErrores=new File("src/ficheroErrores.txt");
+		File entrada=new File("src/ficheroEntradaEj7.dat");
+		File salida=new File("src/ficheroSalidaEj7.txt");
+		File ficheroErrores=new File("src/ficheroErroresEj7.txt");
 
 		try{
 			entrada.createNewFile();
@@ -32,15 +32,17 @@ public class Ejercicio7 {
 
 			pb.directory(directorio);
 				
-			Process p=null;	
-			p=pb.start();
-			
 			//redirecciono entrada
 			pb.redirectInput(entrada);
 			//redirecciono salida
 			pb.redirectOutput(salida);
 			//redirecciono error
 			pb.redirectError(ficheroErrores);
+			
+			
+			Process p=null;	
+			p=pb.start();
+			
 			
 			}catch(IOException e) {
 				e.printStackTrace();

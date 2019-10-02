@@ -13,31 +13,31 @@ public class Ejercicio4 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner teclado=new Scanner(System.in);
-
+		boolean esAsterisco=false;
+		String cadena="";
+		String cadena2="";
+		String asterisco="*";
+		String aux="";
+		//String auxiliar=cadena+" "+cadena2+"*\n";
 
 		try{
 			do {
 				System.out.println("Introduce cadena ");
-				String cadena= teclado.nextLine();
-				System.out.println("Introduce cadena 2");
-				String cadena2= teclado.nextLine();
-				String auxiliar=cadena+" "+cadena2+"*\n";
-				
-				int i=0;
-				char a=' ';
-				char c = ' ';
-				
-				while((i<cadena.length())&&(esAsterisco(c)==false)) {
-					c=cadena.charAt(i);
-					if(esAsterisco(c)==false) {
-						cadena2=cadena+a;
-					}
-					i++;
+				cadena= teclado.nextLine();
+				//System.out.println("Introduce otra cadena");
+				//cadena2=teclado.nextLine();
+				//aux=cadena+" "+cadena2;
+				if(cadena.equals(asterisco)) {
+					esAsterisco=true;
 				}
+				
 				System.out.println("Cadena: ");
-				System.out.println(cadena2.toUpperCase());
-
 			
+				System.out.println(cadena);
+				System.out.println(cadena.toUpperCase());
+				
+
+			}while (esAsterisco==false);
 			
 			
 			
@@ -52,7 +52,7 @@ public class Ejercicio4 {
 			
 			OutputStream os=p.getOutputStream();
 			//os.write("Hola \n Adios\n *".getBytes());
-			os.write(auxiliar.getBytes());
+			os.write(cadena.getBytes());
 			os.flush();
 			os.close();
 			
@@ -86,15 +86,8 @@ public class Ejercicio4 {
 			}catch(NoSuchElementException e) {
 				e.printStackTrace();
 			}
-		}while(esAsterisco(c)==false);
+		
 
 	}
-	public static boolean esAsterisco(char c) {
-		String asterisco="*";
-		if (asterisco.indexOf(c)== -1) {
-			return false;
-		}
-		return true;
-	}
-
+	
 }

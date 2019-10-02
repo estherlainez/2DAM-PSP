@@ -9,7 +9,7 @@ public class Ejercicio5 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner teclado=new Scanner(System.in);
-		String cadena=teclado.nextLine();
+		String cadena="cadena";
 		
 		int inicio = 0;
 		int fin = cadena.length()-1;
