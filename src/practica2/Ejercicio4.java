@@ -6,7 +6,10 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 public class Ejercicio4 {
-
+/*
+ Crea un programa en Java que ejecuta el Ejercicio 3 
+ y muestre su resultado y su valor de salida.
+ */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner teclado=new Scanner(System.in);

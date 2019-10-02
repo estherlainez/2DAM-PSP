@@ -8,7 +8,9 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class Ejercicio6 {
-
+/*Crea un programa en Java que ejecuta el Ejercicio 5 
+ *y muestre su resultado y su valor de salida.
+ */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -26,7 +28,7 @@ public class Ejercicio6 {
 			p=pb.start();
 			
 			OutputStream os=p.getOutputStream();
-			os.write("assa".getBytes());
+			os.write("casa".getBytes());
 			os.flush();
 			os.close();
 			
