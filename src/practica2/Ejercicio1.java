@@ -23,7 +23,7 @@ public class Ejercicio1 {
 	        System.out.println(resultado);
 	        
 		}catch(InputMismatchException e) {
-			System.out.println("Los opeandos deber ser numeros");
+			System.out.println("Los operandos deber ser numeros");
 			System.out.println("Algo ha fallado");
 			System.exit(1);
 		}

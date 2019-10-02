@@ -16,6 +16,31 @@ public class Ejercicio4 {
 
 
 		try{
+			do {
+				System.out.println("Introduce cadena ");
+				String cadena= teclado.nextLine();
+				System.out.println("Introduce cadena 2");
+				String cadena2= teclado.nextLine();
+				String auxiliar=cadena+" "+cadena2+"*\n";
+				
+				int i=0;
+				char a=' ';
+				char c = ' ';
+				
+				while((i<cadena.length())&&(esAsterisco(c)==false)) {
+					c=cadena.charAt(i);
+					if(esAsterisco(c)==false) {
+						cadena2=cadena+a;
+					}
+					i++;
+				}
+				System.out.println("Cadena: ");
+				System.out.println(cadena2.toUpperCase());
+
+			
+			
+			
+			
 			File directorio=new File("./bin");
 		
 			ProcessBuilder pb=new ProcessBuilder("java","practica2.Ejercicio3");
@@ -26,10 +51,12 @@ public class Ejercicio4 {
 			p=pb.start();
 			
 			OutputStream os=p.getOutputStream();
-			String texto="";
-			os.write("Hola \n Adios\n *".getBytes());
+			//os.write("Hola \n Adios\n *".getBytes());
+			os.write(auxiliar.getBytes());
 			os.flush();
 			os.close();
+			
+			
 			
 			if(p.waitFor()!=0) {
 				InputStream is=p.getErrorStream();
@@ -59,8 +86,15 @@ public class Ejercicio4 {
 			}catch(NoSuchElementException e) {
 				e.printStackTrace();
 			}
+		}while(esAsterisco(c)==false);
 
-
+	}
+	public static boolean esAsterisco(char c) {
+		String asterisco="*";
+		if (asterisco.indexOf(c)== -1) {
+			return false;
+		}
+		return true;
 	}
 
 }
