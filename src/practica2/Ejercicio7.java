@@ -32,13 +32,11 @@ public class Ejercicio7 {
 
 			pb.directory(directorio);
 				
-			//redirecciono entrada
 			pb.redirectInput(entrada);
-			//redirecciono salida
-			pb.redirectOutput(salida);
-			//redirecciono error
-			pb.redirectError(ficheroErrores);
 			
+			pb.redirectOutput(salida);
+			
+			pb.redirectError(ficheroErrores);
 			
 			Process p=null;	
 			p=pb.start();

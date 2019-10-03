@@ -38,17 +38,6 @@ public class Ejercicio3 {
 			
 		}while (esAsterisco==false);
 		
-		
-		
+	}
 
-	}
-/*
-	public static boolean esAsterisco(char c) {
-		String asterisco="*";
-		if (asterisco.indexOf(c)== -1) {
-			return false;
-		}
-		return true;
-	}
-*/
 }
