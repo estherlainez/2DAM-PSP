@@ -10,38 +10,22 @@ public class Ejercicio3 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner teclado=new Scanner(System.in);
-		boolean esAsterisco=false;
+		Scanner teclado=new Scanner(System.in);	
 
 		String cadena="";
-		String cadena2="";
+
 		String aux="";
-		String asterisco="*";
-		
-		
-		//System.out.println("Introduce cadena ");
-		//cadena= teclado.nextLine();
-		
-		do {
+
+		do 
+		{
 			System.out.println("Introduce cadena ");
 			cadena= teclado.nextLine();
-			//System.out.println("Introduce cadena ");
-			//cadena2= teclado.nextLine();
-			aux=cadena+" "+cadena2;
 			
-			if(cadena.equals(asterisco)) {
-				esAsterisco=true;
-			}
-			
-			System.out.println("Cadena: ");
-			System.out.println("Cadena " +cadena);
-			System.out.println(cadena.toUpperCase());
-			//System.out.println("La frase unida " +aux);
-			//System.out.println(aux.toUpperCase());
-			
-			
-		}while (esAsterisco==false);
-		
+			aux+=cadena;
+
+		}while (!cadena.equals("*"));
+		teclado.close();
+		System.out.println(aux);
 	}
 
 }

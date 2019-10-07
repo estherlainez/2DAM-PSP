@@ -1,0 +1,5 @@
+cadena
+cadena
+anedac
+No es palindromo
+La cadena tiene una longitud de 6

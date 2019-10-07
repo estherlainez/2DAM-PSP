@@ -18,48 +18,14 @@ public class Ejercicio8 {
 		// TODO Auto-generated method stub
 		//Ficheros de entrada y de salida del error
 		
-		Scanner teclado=new Scanner(System.in);
-		boolean esAsterisco=false;
-
-		String cadena="";
-		
-		String asterisco="*";
-
-		
-		do {
-			System.out.println("Introduce cadena ");
-			cadena= teclado.nextLine();
-			
-			if(cadena.equals(asterisco)) {
-				esAsterisco=true;
-			}
-			
-			System.out.println("Cadena: ");
-		
-			System.out.println(cadena);
-			System.out.println(cadena.toUpperCase());
-			
-			
-		}while (esAsterisco==false);
-		
+	
 		File entrada=new File("src/ficheroEntradaEj8.dat");
-		File resultado=new File("src/ficheroResultadoEj8.txt");
 		File salida=new File("src/ficheroSalidaEj8.txt");
+		File errores=new File("src/ficheroErroresEj8.txt");
 
 		try{
-			entrada.createNewFile();
-			resultado.createNewFile();
-			salida.createNewFile();
-					
+		
 			File directorio=new File("./bin");
-			
-			FileWriter fw=new FileWriter(entrada);
-			BufferedWriter bw=new BufferedWriter(fw);
-				
-			bw.write(cadena);
-				
-			bw.close();
-			fw.close();
 			
 			ProcessBuilder pb=new ProcessBuilder("java","practica2.Ejercicio3");
 
@@ -67,11 +33,10 @@ public class Ejercicio8 {
 					
 			pb.redirectInput(entrada);
 		
-			pb.redirectInput(resultado);
-
 			pb.redirectOutput(salida);
 					
-					
+			pb.redirectError(errores);	
+			
 			Process p=null;	
 			p=pb.start();
 					

@@ -13,31 +13,21 @@ public class Ejercicio4 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner teclado=new Scanner(System.in);
-		boolean esAsterisco=false;
+		
 		String cadena="";
-		String cadena2="";
-		String asterisco="*";
+		
 		String aux="";
 		//String auxiliar=cadena+" "+cadena2+"*\n";
 
 		try{
-			do {
+			do 
+			{
 				System.out.println("Introduce cadena ");
 				cadena= teclado.nextLine();
-				//System.out.println("Introduce otra cadena");
-				//cadena2=teclado.nextLine();
-				//aux=cadena+" "+cadena2;
-				if(cadena.equals(asterisco)) {
-					esAsterisco=true;
-				}
-				
-				System.out.println("Cadena: ");
-			
-				System.out.println(cadena);
-				System.out.println(cadena.toUpperCase());
-				
 
-			}while (esAsterisco==false);
+				aux+=cadena+"\n";
+
+			}while (!cadena.equals("*"));
 			
 			
 			
@@ -51,12 +41,10 @@ public class Ejercicio4 {
 			p=pb.start();
 			
 			OutputStream os=p.getOutputStream();
-			//os.write("Hola \n Adios\n *".getBytes());
-			os.write(cadena.getBytes());
+			
+			os.write(aux.getBytes());
 			os.flush();
 			os.close();
-			
-			
 			
 			if(p.waitFor()!=0) {
 				InputStream is=p.getErrorStream();
