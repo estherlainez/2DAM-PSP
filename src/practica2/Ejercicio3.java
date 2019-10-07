@@ -17,23 +17,27 @@ public class Ejercicio3 {
 		String cadena2="";
 		String aux="";
 		String asterisco="*";
-
+		
+		
+		//System.out.println("Introduce cadena ");
+		//cadena= teclado.nextLine();
 		
 		do {
 			System.out.println("Introduce cadena ");
 			cadena= teclado.nextLine();
 			//System.out.println("Introduce cadena ");
 			//cadena2= teclado.nextLine();
-			//aux=cadena+cadena2;
+			aux=cadena+" "+cadena2;
 			
 			if(cadena.equals(asterisco)) {
 				esAsterisco=true;
 			}
 			
 			System.out.println("Cadena: ");
-		
-			System.out.println(cadena);
+			System.out.println("Cadena " +cadena);
 			System.out.println(cadena.toUpperCase());
+			//System.out.println("La frase unida " +aux);
+			//System.out.println(aux.toUpperCase());
 			
 			
 		}while (esAsterisco==false);
