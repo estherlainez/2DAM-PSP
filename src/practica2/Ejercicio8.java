@@ -32,9 +32,7 @@ public class Ejercicio8 {
 			pb.directory(directorio);
 					
 			pb.redirectInput(entrada);
-		
-			pb.redirectOutput(salida);
-					
+			pb.redirectOutput(salida);		
 			pb.redirectError(errores);	
 			
 			Process p=null;	
