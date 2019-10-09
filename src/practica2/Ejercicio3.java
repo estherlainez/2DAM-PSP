@@ -23,9 +23,9 @@ public class Ejercicio3 {
 			
 			aux+=cadena;
 
-		}while (!cadena.equals("*"));
+		}while (!cadena.trim().equals("*"));
 		teclado.close();
-		System.out.println(aux);
+		System.out.println(aux.toUpperCase());
 	}
 
 }

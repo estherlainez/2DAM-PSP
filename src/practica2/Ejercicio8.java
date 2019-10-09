@@ -16,9 +16,6 @@ public class Ejercicio8 {
  */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//Ficheros de entrada y de salida del error
-		
-	
 		File entrada=new File("src/ficheroEntradaEj8.dat");
 		File salida=new File("src/ficheroSalidaEj8.txt");
 		File errores=new File("src/ficheroErroresEj8.txt");

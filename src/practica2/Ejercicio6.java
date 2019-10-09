@@ -16,7 +16,6 @@ public class Ejercicio6 {
 
 		Scanner teclado=new Scanner(System.in);
 
-
 		try{
 			File directorio=new File("./bin");
 		
@@ -28,7 +27,7 @@ public class Ejercicio6 {
 			p=pb.start();
 			
 			OutputStream os=p.getOutputStream();
-			os.write("casa".getBytes());
+			os.write("ana".getBytes());
 			os.flush();
 			os.close();
 			

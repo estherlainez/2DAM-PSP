@@ -27,6 +27,7 @@ public class Ejercicio2 {
 			p=pb.start();
 			OutputStream os=p.getOutputStream();
 			os.write("7 8".getBytes());
+			//para forzar el flujo
 			os.flush();
 			os.close();
 			

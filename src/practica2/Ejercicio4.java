@@ -17,17 +17,17 @@ public class Ejercicio4 {
 		String cadena="";
 		
 		String aux="";
-		//String auxiliar=cadena+" "+cadena2+"*\n";
+	
 
 		try{
 			do 
 			{
 				System.out.println("Introduce cadena ");
 				cadena= teclado.nextLine();
-
+				//\n me evitara los errores del salto de linea
 				aux+=cadena+"\n";
 
-			}while (!cadena.equals("*"));
+			}while (!cadena.trim().equals("*"));
 			
 			
 			

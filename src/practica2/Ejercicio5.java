@@ -9,22 +9,14 @@ public class Ejercicio5 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner teclado=new Scanner(System.in);
-		String cadena="cadena";
+		String cadena=teclado.nextLine();
 		
 		int inicio = 0;
 		int fin = cadena.length()-1;
-		cadena.replace(" ", "");
-		cadena.replace(",", "");
-		cadena.replace(".","");
-		System.out.println(cadena);
 		
 		boolean esP = true;
-		cadena.toLowerCase();
+		cadena.toLowerCase().trim();
 		
-		System.out.println(cadena);
-		
-		String invertida = new StringBuilder(cadena).reverse().toString();
-		System.out.println(invertida);
 		
 		while ((inicio<fin)){
 			
@@ -40,6 +32,10 @@ public class Ejercicio5 {
 		else
 			System.out.println("No es palindromo");
 
+		//System.out.println(cadena);
+		
+		String invertida = new StringBuilder(cadena).reverse().toString();
+		System.out.println(invertida);
 		
 		
 		if (cadena.length()==0) {
